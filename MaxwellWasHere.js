@@ -1,6 +1,6 @@
 //#region madness
 
-var wow = "🥵🥵🥵"
+var wow = "🥵"
 
 //#endregion
 
