@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>
+        <%- include('../partials/navTop') %>
+    </header>
+
+    <h1>Welcome to Mathematics</h1>
+</body>
+<!-- Course Selection by level/qualification-->
+<section>
+    <ul id="courselistEng">
+        <li>
+            <a href="">Mathematics Foundation Phase [Level 0 - 2]</a>
+        </li>
+        <li>
+            <a href="">Mathematics Elementary Phase [Level 3 - 4]</a>
+        </li>
+        <li>
+            <a href="">Mathematics Advanced Phase [Level 5]</a>
+        </li>
+    </ul>
+</section>
+
+<nav id="navBottom">
+    <input type="button" value="Previous" onclick="goPrevPage()" id="btnPrevious">
+    <input type="button" value="Next" onclick="goNextPage()" id="btnNext">
+</nav>
+
+<%- include('../partials/footer')%> 
+</html>
