@@ -4,6 +4,7 @@ Packages installed
     > npm i body-parser --save
     > npm i mssql --save
     > npm i ejs --save
+    > npm i mongoose --save
 */
 const express = require('express');
 const app = express();
@@ -13,8 +14,10 @@ const sql = require('mssql');
 const courseRoutes = require('./routes/courseRoutes');
 const questionRouter = require('./routes/questionRouter');
 const testRouter = require('./routes/testRouter');
+const mongoose = require('mongoose');
 
-//Db configuration
+//#region Db Configuration
+//mssql
 const sqlConfig = {
     server: "localhost", 
     //port: port,//port number is 3000
@@ -34,6 +37,18 @@ const sqlConfig = {
         enableArithAbort: true,
     }
 };
+
+//#region [rgba(100,100,100,0.2)] mongoose setup
+var connectionString = 'mongodb://localhost/AlkebulaanDBTest';
+
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true});
+const db = mongoose.connection;
+
+
+db.on('error', (error) => console.error(error));
+db.once('open', () => console.log('connected to mongoose database'));
+//#endregion
+//#endregion
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
