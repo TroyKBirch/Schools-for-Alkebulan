@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>
+        <%- include('./partials/navTop') %>
+    </header>   
+
+    <div class="main">
+        <table>
+            <tr>
+                <th id="mark">Mark ID</th>
+                <th id="profile">Profile ID</th>
+                <th id="marker">Marker/Assessor ID</th>
+                <th id="test">Test ID</th>
+                <th id="grade">Mark</th>
+            </tr>
+            <% grades.forEach((row) =>{%>  
+                <tr>
+                    <td><%= row.MarkID%></td>
+                    <td><%= row.ProfileID%></td>
+                    <td><%= row.AssessorID%></td>
+                    <td><%= row.TestID%></td>
+                    <td><%= row.MarkForTest%></td>
+                </tr>
+                <%});%> 
+        </table>
+    </div>
+
+    <nav id="navBottom">
+        <input type="button" value="Previous" onclick="goPrevPage()" id="btnPrevious">
+        <input type="button" value="Next" onclick="goNextPage()" id="btnNext">
+    </nav> 
+</body>
+    <%- include('./partials/footer')%>
+</html>

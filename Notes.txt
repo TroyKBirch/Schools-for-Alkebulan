@@ -1,0 +1,10 @@
+//Code removed from grades.ejs
+<!--
+            Use this code to iterate through an object to fill out a
+            table with data 
+            <%{object}.forEach((obj) =>{%>  
+            <tr>
+                <td><%= obj%></td>
+            </tr>
+            <%});%> 
+-->
