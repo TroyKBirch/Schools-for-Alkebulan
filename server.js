@@ -11,6 +11,8 @@ const bodyParser = require('body-parser');
 const port = 3000;
 const sql = require('mssql');
 const courseRoutes = require('./routes/courseRoutes');
+const questionRouter = require('./routes/questionRouter');
+const testRouter = require('./routes/testRouter');
 
 //Db configuration
 const sqlConfig = {
@@ -38,9 +40,12 @@ app.set('view engine', 'ejs');
 
 //Middleware & staticfiles
 app.use(express.static('public'));
+app.use(express.json());
 
 //Course routes
 app.use('/courses', courseRoutes);
+app.use('/test', testRouter);
+app.use('/question', questionRouter);
 
 //Endpoint which will render the page after connecting to the database
 app.get('/grades', (req, res) => {    
