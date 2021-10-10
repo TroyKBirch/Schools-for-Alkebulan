@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Enviroment</title>
+</head>
+<body>
+
+    <form action= <%= testID %>/checkTest method="post">
+        <h4>Question 1: </h4>
+        <%= q1 %>
+        <h4>questionID: </h4>
+        <%= q1ID %>
+        <label for="txtq1">Answer: </label>
+        <input type="text" name="txtq1Answer" id="txtq1" value="Enter Text Here">
+        
+        <h4>Question 2: </h4>
+        <%= q2 %>
+        <h4>questionID: </h4>
+        <%= q2ID %>
+        <label for="txtq2">Answer: </label>
+        <input type="text" name="txtq2Answer" id="txtq2" value="Enter Text Here">
+        
+        <h4>Question 3: </h4>
+        <%= q3 %>
+        <h4>questionID: </h4>
+        <%= q3ID %>
+        <label for="txtq3">Answer: </label>
+        <input type="text" name="txtq3Answer" id="txtq3" value="Enter Text Here">
+
+        <h4>Question 4: </h4>
+        <%= q4 %>
+        <h4>questionID: </h4>
+        <%= q4ID %>
+        <label for="txtq4">Answer: </label>
+        <input type="text" name="txtq4Answer" id="txtq4" value="Enter Text Here">
+
+        <h4>Question 5: </h4>
+        <%= q5 %>
+        <h4>questionID: </h4>
+        <%= q5ID %>
+        <label for="txtq5">Answer: </label>
+        <input type="text" name="txtq5Answer" id="txtq5" value="Enter Text Here">
+
+
+        <input type="submit" value="OK">
+    </form>
+</body>
+</html>

@@ -17,7 +17,9 @@ router.get('/', async (req, res) =>
     try
     {
         const tests = await testModel.find()
-        res.json(tests)
+        res.render('TestSelect', {
+            tests: tests
+        })
     }
     catch (error) 
     {
@@ -37,7 +39,7 @@ router.post('/:id/checkTest', getQuestion, urlEncodedParser, (req, res) => {
     }
     else
     {
-        msg = "Get Fucked! 🥵🥵🥵"; 
+        msg = "That is incorrect! 😞😞😞"; 
     }
 
     res.render('answer', {question: res.questionModel.question, answer: answer, userInput: userAnswer, AnswerStatus: msg, questionID: res.questionModel.id})
