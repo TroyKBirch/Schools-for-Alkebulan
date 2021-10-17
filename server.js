@@ -1,11 +1,13 @@
-/*
-Packages installed
-    > npm i express --save
-    > npm i body-parser --save
-    > npm i mssql --save
-    > npm i ejs --save
-    > npm i mongoose --save
-*/
+//#region packages installed
+//! Packages installed
+//     > npm i express --save
+//     > npm i body-parser --save
+//     > npm i mssql --save
+//     > npm i ejs --save
+//     > npm i mongoose --save
+//#endregion
+
+//#region npm packages
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -15,6 +17,7 @@ const courseRoutes = require('./routes/courseRoutes');
 const questionRouter = require('./routes/questionRouter');
 const testRouter = require('./routes/testRouter');
 const mongoose = require('mongoose');
+//#endregion
 
 //#region Db Configuration
 //mssql
@@ -50,18 +53,22 @@ db.once('open', () => console.log('connected to mongoose database'));
 //#endregion
 //#endregion
 
+//#region app.use and middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 
 //Middleware & staticfiles
 app.use(express.static('public'));
 app.use(express.json());
+//#endregion
 
-//Course routes
+//#region routes
 app.use('/courses', courseRoutes);
 app.use('/test', testRouter);
 app.use('/question', questionRouter);
+//#endregion
 
+//#region get requests
 //Endpoint which will render the page after connecting to the database
 app.get('/grades', (req, res) => {    
     var request = new sql.Request();
@@ -91,6 +98,7 @@ app.get('/home', (req, res) => {
 app.get('/', (req, res) => {
     res.redirect('/home');
 });
+//#endregion
 
 //Connection to the database is made before initiating the server
 /*
