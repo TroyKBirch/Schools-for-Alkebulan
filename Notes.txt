@@ -7,4 +7,13 @@
                 <td><%= obj%></td>
             </tr>
             <%});%> 
--->
+            
+            <% grades.forEach((row) =>{%>  
+                <tr>
+                    <td><%= row.MarkID%></td>
+                    <td><%= row.ProfileID%></td>
+                    <td><%= row.AssessorID%></td>
+                    <td><%= row.TestID%></td>
+                    <td><%= row.MarkForTest%></td>
+                </tr>
+                <%});%>  -->
