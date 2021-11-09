@@ -17,7 +17,8 @@ router.get('/', async (req, res) =>
     try
     {
         const tests = await testModel.find()
-        res.render('TestSelect', {
+        res.render('../views/course/TestSelect.ejs', 
+        {
             tests: tests
         })
     }
