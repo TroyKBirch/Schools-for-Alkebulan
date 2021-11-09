@@ -52,7 +52,7 @@ router.get('/:id', getTest, (req, res) =>
     res.json(res.testModel)
 });
 
-//get one test
+//get testPage
 router.get('/:id/test', getTest, async (req, res) => { 
     
     const questions = await questionModel.find();

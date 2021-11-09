@@ -8,7 +8,9 @@
 </head>
 <body>
 
-    <form action= <%= testID %>/checkTest method="post">
+    
+    <form action=<%= testID %>/checkTest method="post">
+        <h1><%= testID %>/checkTest</h1>
         <h4>Question 1: </h4>
         <%= q1 %>
         <h4>questionID: </h4>
@@ -43,7 +45,6 @@
         <%= q5ID %>
         <label for="txtq5">Answer: </label>
         <input type="text" name="txtq5Answer" id="txtq5" value="Enter Text Here">
-
 
         <input type="submit" value="OK">
     </form>
