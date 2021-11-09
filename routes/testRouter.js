@@ -174,28 +174,37 @@ router.post('/', async (req, res) => {
     }
 });
 
-//todo update one
+// update one
 router.patch('/:id', getQuestion, async (req, res) => {
-    if (req.body.question != null) {
-        res.questionModel.question = req.body.question;
+    if (req.body.q1 != null) {
+        res.testModel.q1 = req.body.q1;
     }
-    if (req.body.answer != null) {
-        res.questionModel.answer = req.body.answer;
+    if (req.body.q2 != null) {
+        res.testModel.q2 = req.body.q2;
+    }
+    if (req.body.q3 != null) {
+        res.testModel.q3 = req.body.q3;
+    }
+    if (req.body.q4 != null) {
+        res.testModel.q4 = req.body.q4;
+    }
+    if (req.body.q5 != null) {
+        res.testModel.q5 = req.body.q5;
     }
 
     try {
-        const updatedQuestion = await res.questionModel.save();
-        res.json(updatedQuestion)
+        const updatedTest = await res.testModel.save();
+        res.json(updatedTest)
     } catch (error) {
         res.status(400).json({message: error.message})
     }
 });
 
-//todo delete one
+// delete one
 router.delete('/:id', getQuestion, async (req, res) => {
     try {
-        await res.questionModel.remove()
-        res.json({ message: 'Deleted Question'})
+        await res.testModel.remove()
+        res.json({ message: 'Deleted Test'})
     } catch (error) {
         res.status(500).json({message: error.message})
     }
