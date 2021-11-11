@@ -195,14 +195,28 @@ router.post('/:id/:id/checkTest', getTest, urlEncodedParser, async (req, res) =>
     {
         q5status = false;
     }
+    
+    q1Icon = getMarkIcon(q1status);
+    q2Icon = getMarkIcon(q2status);
+    q3Icon = getMarkIcon(q3status);
+    q4Icon = getMarkIcon(q4status);
+    q5Icon = getMarkIcon(q5status);
 
     res.render('testAnswer', 
     {
+        //answers
         q1Answer: q1Answer,
         q2Answer: q2Answer,
         q3Answer: q3Answer,
         q4Answer: q4Answer,
-        q5Answer: q5Answer
+        q5Answer: q5Answer,
+
+        //icons
+        q1Icon: q1Icon,
+        q2Icon: q2Icon,
+        q3Icon: q3Icon,
+        q4Icon: q4Icon,
+        q5Icon: q5Icon
     })
 })
 //#endregion
@@ -311,4 +325,17 @@ async function getTest(req, res, next)
 }
 //#endregion
 
+//#region functions
+function getMarkIcon(QuestionStatus) 
+{
+    if (QuestionStatus == true) 
+    {
+        return "✔";
+    }
+    else
+    {
+        return "❌";
+    }
+}
+//#endregion
 module.exports = router;
