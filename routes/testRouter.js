@@ -108,8 +108,8 @@ router.get('/:id/test', getTest, async (req, res) => {
     })
 });
 
-//check test
-router.post('/:id/checkTest', getTest, urlEncodedParser, async (req, res) => {
+//! check test
+router.post('/:id/:id/checkTest', getTest, urlEncodedParser, async (req, res) => {
     var q1Answer = req.body.txtq1Answer;
     var q2Answer = req.body.txtq2Answer;
     var q3Answer = req.body.txtq3Answer;
@@ -142,7 +142,62 @@ router.post('/:id/checkTest', getTest, urlEncodedParser, async (req, res) => {
         }
     }
 
-    res.render('testAnswer', {
+    //checking question
+    var questionArray = [question1, question2, question3, question4, question5];
+    var q1status = false;
+    var q2status = false;
+    var q3status = false;
+    var q4status = false;
+    var q5status = false;
+
+    //! long if statement
+    if (question1.answer == q1Answer) 
+    {
+        q1status = true;
+    } 
+    else 
+    {
+        q1status = false;
+    }
+
+    if (question2.answer == q2Answer) 
+    {
+        q2status = true;
+    } 
+    else 
+    {
+        q2status = false;
+    }
+
+    if (question3.answer == q3Answer) 
+    {
+        q3status = true;
+    } 
+    else 
+    {
+        q3status = false;
+    }
+
+    if (question4.answer == q4Answer) 
+    {
+        q4status = true;
+    } 
+    else 
+    {
+        q4status = false;
+    }
+
+    if (question5.answer == q5Answer) 
+    {
+        q5status = true;
+    } 
+    else 
+    {
+        q5status = false;
+    }
+
+    res.render('testAnswer', 
+    {
         q1Answer: q1Answer,
         q2Answer: q2Answer,
         q3Answer: q3Answer,
