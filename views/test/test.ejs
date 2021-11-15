@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %>
-<body>
+<body id="testBody">
     <header>
         <%- include('./partials/navTop') %>
     </header>   
     
     <form action=<%= testID %>/checkTest method="post">
-        <h1><%= testID %>/checkTest</h1>
-        <h4>Question 1: </h4>
-        <%= q1 %>
+        <h1 id="testTitle"><%= testID %>/checkTest</h1>
+        <h4 id="Q1Title">Question 1: </h4>
+        <div id="q1Content"><%= q1 %></div>
         <h4>questionID: </h4>
         <%= q1ID %>
         <label for="txtq1">Answer: </label>
-        <input type="text" name="txtq1Answer" id="txtq1" value="Enter Text Here">
+        <input type="text" name="txtq1Answer" id="q1txtBox" value="Enter Text Here">
         
-        <h4>Question 2: </h4>
-        <%= q2 %>
+        <h4 id="Q2Title">Question 2: </h4>
+        <div id="q2Content"><%= q2 %></div>
         <h4>questionID: </h4>
         <%= q2ID %>
         <label for="txtq2">Answer: </label>
-        <input type="text" name="txtq2Answer" id="txtq2" value="Enter Text Here">
+        <input type="text" name="txtq2Answer" id="q2txtBox" value="Enter Text Here">
         
-        <h4>Question 3: </h4>
-        <%= q3 %>
+        <h4 id="Q3Title">Question 3: </h4>
+        <div id="q3Content"><%= q3 %></div>
         <h4>questionID: </h4>
         <%= q3ID %>
         <label for="txtq3">Answer: </label>
-        <input type="text" name="txtq3Answer" id="txtq3" value="Enter Text Here">
+        <input type="text" name="txtq3Answer" id="q3txtBox" value="Enter Text Here">
 
-        <h4>Question 4: </h4>
-        <%= q4 %>
+        <h4 id="Q4Title">Question 4: </h4>
+        <div id="q4Content"><%= q4 %></div>
         <h4>questionID: </h4>
         <%= q4ID %>
         <label for="txtq4">Answer: </label>
-        <input type="text" name="txtq4Answer" id="txtq4" value="Enter Text Here">
+        <input type="text" name="txtq4Answer" id="q4txtBox" value="Enter Text Here">
 
-        <h4>Question 5: </h4>
-        <%= q5 %>
+        <h4 id="Q5Title">Question 5: </h4>
+        <div id="q5Content"><%= q5 %></div>
         <h4>questionID: </h4>
         <%= q5ID %>
         <label for="txtq5">Answer: </label>
-        <input type="text" name="txtq5Answer" id="txtq5" value="Enter Text Here">
+        <input type="text" name="txtq5Answer" id="q5txtBox" value="Enter Text Here">
 
         <input type="submit" value="OK">
     </form>
