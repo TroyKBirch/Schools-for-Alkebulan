@@ -43,7 +43,7 @@ router.post('/:id/checkTest', getQuestion, urlEncodedParser, (req, res) => {
         msg = "That is incorrect! 😞😞😞"; 
     }
 
-    res.render('answer', {question: res.questionModel.question, answer: answer, userInput: userAnswer, AnswerStatus: msg, questionID: res.questionModel.id})
+    res.render('../views/test/answer', {question: res.questionModel.question, answer: answer, userInput: userAnswer, AnswerStatus: msg, questionID: res.questionModel.id})
 });
 
 //get one test
@@ -87,7 +87,7 @@ router.get('/:id/test', getTest, async (req, res) => {
         }
     }
 
-    res.render('test', 
+    res.render('../views/test/test', 
     {   
         q1: question1.question,
         q1ID: res.testModel.q1,
@@ -202,7 +202,7 @@ router.post('/:id/:id/checkTest', getTest, urlEncodedParser, async (req, res) =>
     q4Icon = getMarkIcon(q4status);
     q5Icon = getMarkIcon(q5status);
 
-    res.render('testAnswer', 
+    res.render('../views/test/testAnswer', 
     {
         //answers
         q1Answer: q1Answer,
