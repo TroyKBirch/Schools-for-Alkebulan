@@ -32,6 +32,7 @@ body{
     background-color: rgba(0, 0, 0, 0.753);
 }
 
+
 #txtWelcomeHeading{
     position: absolute;
     width: 949px;
@@ -89,16 +90,7 @@ body{
 }
 
 
-#btnPrevious {
-    float: left;
-    height: 25px;
-    width: 75px;
-}
-#btnNext {
-    float: right;
-    height: 25px;
-    width: 75px;
-}
+
 
 /*Course Selection*/
 #courseList{
@@ -146,24 +138,7 @@ section ul li a:hover{
     margin-left: -5%;
 }
 
-/*Page Navigation*/
-#navBottom {
-    display: inline-block;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
 
-/*Foot*/
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 25px;
-    width: 100%;
-    text-align: center;
-    display: block;
-    font-size: 0.75em;
-}
+
+
 
