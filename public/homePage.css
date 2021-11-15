@@ -10,7 +10,7 @@ html, body {
 }
 
 /*Home Course selection*/
-#quickLink div{
+/*#quickLink div{
     width: 50%;
     float: left;
     text-align: center;
@@ -23,7 +23,7 @@ div a{
 }
 #quickLink div:hover{
     background-color: skyblue;
-}
+}*/
 
 /*Body*/
 body{
@@ -32,13 +32,13 @@ body{
     background-color: rgba(0, 0, 0, 0.753);
 }
 
-
+/*Section 1: Welcome*/
 #txtWelcomeHeading{
     position: absolute;
     width: 949px;
     height: 113px;
     left: calc(50% - 949px/2 - 0.5px);
-    top: 388px;
+    top: 300px;
 
     font-family: Roboto;
     font-style: normal;
@@ -89,7 +89,11 @@ body{
     margin: 0px 10px;
 }
 
+/*Section 2: Journey With Us*/
 
+/*Section 3: Course Info*/
+
+/*Section 4: Register*/
 
 
 /*Course Selection*/
@@ -109,13 +113,13 @@ body{
 #courseList li:hover{
     background-color: skyblue;
 }
-
+/*
 section{
     float: left;
 }
 section ul li a{
-    /* color: black;
-    text-decoration: none;    */
+     color: black;
+    text-decoration: none;    
     display: block;
     text-decoration: none;
     color: white;
@@ -129,7 +133,7 @@ section ul li a:hover{
     background-color: skyblue;
     border: solid;
     border-color: white;
-}
+}*/
 
 #courselistEng li{
     list-style: none;
