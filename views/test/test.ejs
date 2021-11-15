@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %>
-<body>
+<body id="testBody">
     <header>
         <%- include('./partials/navTop') %>
     </header>   
     
     <form action=<%= testID %>/checkTest method="post">
-        <h1><%= testID %>/checkTest</h1>
-        <h4>Question 1: </h4>
+        <h1 id="testTitle"><%= testID %>/checkTest</h1>
+        <h4 id="Q1Title">Question 1: </h4>
         <%= q1 %>
         <h4>questionID: </h4>
         <%= q1ID %>
