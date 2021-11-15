@@ -17,7 +17,7 @@ footer{
     top: 4406px;
     padding: 8px;
 
-    background: url(.jpg);
+    background-color:rgba(53, 109, 104, 0.705);
 }
 footer h4{
     position: absolute;
