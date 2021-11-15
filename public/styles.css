@@ -163,7 +163,7 @@ footer{
     color: #FFFFFF;
 }
 
-/* questionTitles */
+/* #region questionTitles */
 #Q1Title
 {
     position: absolute;
@@ -263,8 +263,9 @@ footer{
     
     color: #FDFCFC;
 }
+/* #endregion */
 
-/* QuestionContent */
+/* #region QuestionContent */
 #q1Content
 {
     position: absolute;
@@ -359,9 +360,10 @@ footer{
     
     color: #FFFBFB;
 }
+/* #endregion */
 
-/* edit box */
-#q1EditBox
+/* #region edit box */
+#q1txtBox
 {
     position: absolute;
     left: 0%;
@@ -375,7 +377,7 @@ footer{
     border-radius: 4px;
 }
 
-#q2EditBox
+#q2txtBox
 {
     position: absolute;
     left: 0%;
@@ -389,7 +391,7 @@ footer{
     border-radius: 4px;
 }
 
-#q3EditBox
+#q3txtBox
 {
     position: absolute;
     left: 0%;
@@ -403,7 +405,7 @@ footer{
     border-radius: 4px;
 }
 
-#q4EditBox
+#q4txtBox
 {
     position: absolute;
     left: 0%;
@@ -417,7 +419,7 @@ footer{
     border-radius: 4px;
 }
 
-#q5EditBox
+#q5txtBox
 {
     position: absolute;
     left: 0%;
@@ -430,6 +432,7 @@ footer{
     box-sizing: border-box;
     border-radius: 4px;
 }
+/* #endregion */
 
 /* button */
 #testSubmitButton
