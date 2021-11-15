@@ -14,6 +14,7 @@ const port = 3000;
 const courseRoutes = require('./routes/courseRoutes');
 const questionRouter = require('./routes/questionRouter');
 const testRouter = require('./routes/testRouter');
+const englishRouter = require('./routes/englishRouter');
 const countingRouter = require('./routes/counting')
 const mongoose = require('mongoose');
 //#endregion
@@ -42,6 +43,7 @@ app.use(express.json());
 app.use('/courses', courseRoutes);
 app.use('/test', testRouter);
 app.use('/counting', countingRouter)
+app.use('/english', englishRouter)
 app.use('/question', questionRouter);
 //#endregion
 
