@@ -17,7 +17,8 @@ router.get('/', async (req, res) =>
     try
     {
         const tests = await testModel.find()
-        res.render('TestSelect', {
+        res.render('../views/course/TestSelect.ejs', 
+        {
             tests: tests
         })
     }
@@ -42,7 +43,7 @@ router.post('/:id/checkTest', getQuestion, urlEncodedParser, (req, res) => {
         msg = "That is incorrect! 😞😞😞"; 
     }
 
-    res.render('answer', {question: res.questionModel.question, answer: answer, userInput: userAnswer, AnswerStatus: msg, questionID: res.questionModel.id})
+    res.render('../views/test/answer', {question: res.questionModel.question, answer: answer, userInput: userAnswer, AnswerStatus: msg, questionID: res.questionModel.id})
 });
 
 //get one test
@@ -51,7 +52,7 @@ router.get('/:id', getTest, (req, res) =>
     res.json(res.testModel)
 });
 
-//get one test
+//get testPage
 router.get('/:id/test', getTest, async (req, res) => { 
     
     const questions = await questionModel.find();
@@ -86,7 +87,7 @@ router.get('/:id/test', getTest, async (req, res) => {
         }
     }
 
-    res.render('test', 
+    res.render('../views/test/test', 
     {   
         q1: question1.question,
         q1ID: res.testModel.q1,
@@ -107,8 +108,8 @@ router.get('/:id/test', getTest, async (req, res) => {
     })
 });
 
-//check test
-router.post('/:id/checkTest', getTest, urlEncodedParser, async (req, res) => {
+//! check test
+router.post('/:id/:id/checkTest', getTest, urlEncodedParser, async (req, res) => {
     var q1Answer = req.body.txtq1Answer;
     var q2Answer = req.body.txtq2Answer;
     var q3Answer = req.body.txtq3Answer;
@@ -141,12 +142,81 @@ router.post('/:id/checkTest', getTest, urlEncodedParser, async (req, res) => {
         }
     }
 
-    res.render('testAnswer', {
+    //checking question
+    var questionArray = [question1, question2, question3, question4, question5];
+    var q1status = false;
+    var q2status = false;
+    var q3status = false;
+    var q4status = false;
+    var q5status = false;
+
+    //! long if statement
+    if (question1.answer == q1Answer) 
+    {
+        q1status = true;
+    } 
+    else 
+    {
+        q1status = false;
+    }
+
+    if (question2.answer == q2Answer) 
+    {
+        q2status = true;
+    } 
+    else 
+    {
+        q2status = false;
+    }
+
+    if (question3.answer == q3Answer) 
+    {
+        q3status = true;
+    } 
+    else 
+    {
+        q3status = false;
+    }
+
+    if (question4.answer == q4Answer) 
+    {
+        q4status = true;
+    } 
+    else 
+    {
+        q4status = false;
+    }
+
+    if (question5.answer == q5Answer) 
+    {
+        q5status = true;
+    } 
+    else 
+    {
+        q5status = false;
+    }
+    
+    q1Icon = getMarkIcon(q1status);
+    q2Icon = getMarkIcon(q2status);
+    q3Icon = getMarkIcon(q3status);
+    q4Icon = getMarkIcon(q4status);
+    q5Icon = getMarkIcon(q5status);
+
+    res.render('../views/test/testAnswer', 
+    {
+        //answers
         q1Answer: q1Answer,
         q2Answer: q2Answer,
         q3Answer: q3Answer,
         q4Answer: q4Answer,
-        q5Answer: q5Answer
+        q5Answer: q5Answer,
+
+        //icons
+        q1Icon: q1Icon,
+        q2Icon: q2Icon,
+        q3Icon: q3Icon,
+        q4Icon: q4Icon,
+        q5Icon: q5Icon
     })
 })
 //#endregion
@@ -173,28 +243,37 @@ router.post('/', async (req, res) => {
     }
 });
 
-//todo update one
+// update one
 router.patch('/:id', getQuestion, async (req, res) => {
-    if (req.body.question != null) {
-        res.questionModel.question = req.body.question;
+    if (req.body.q1 != null) {
+        res.testModel.q1 = req.body.q1;
     }
-    if (req.body.answer != null) {
-        res.questionModel.answer = req.body.answer;
+    if (req.body.q2 != null) {
+        res.testModel.q2 = req.body.q2;
+    }
+    if (req.body.q3 != null) {
+        res.testModel.q3 = req.body.q3;
+    }
+    if (req.body.q4 != null) {
+        res.testModel.q4 = req.body.q4;
+    }
+    if (req.body.q5 != null) {
+        res.testModel.q5 = req.body.q5;
     }
 
     try {
-        const updatedQuestion = await res.questionModel.save();
-        res.json(updatedQuestion)
+        const updatedTest = await res.testModel.save();
+        res.json(updatedTest)
     } catch (error) {
         res.status(400).json({message: error.message})
     }
 });
 
-//todo delete one
+// delete one
 router.delete('/:id', getQuestion, async (req, res) => {
     try {
-        await res.questionModel.remove()
-        res.json({ message: 'Deleted Question'})
+        await res.testModel.remove()
+        res.json({ message: 'Deleted Test'})
     } catch (error) {
         res.status(500).json({message: error.message})
     }
@@ -246,4 +325,17 @@ async function getTest(req, res, next)
 }
 //#endregion
 
+//#region functions
+function getMarkIcon(QuestionStatus) 
+{
+    if (QuestionStatus == true) 
+    {
+        return "✔";
+    }
+    else
+    {
+        return "❌";
+    }
+}
+//#endregion
 module.exports = router;

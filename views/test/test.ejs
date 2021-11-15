@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Enviroment</title>
-</head>
+    <%- include('./partials/head') %>
 <body>
-
-    <form action= <%= testID %>/checkTest method="post">
+    <header>
+        <%- include('./partials/navTop') %>
+    </header>   
+    
+    <form action=<%= testID %>/checkTest method="post">
+        <h1><%= testID %>/checkTest</h1>
         <h4>Question 1: </h4>
         <%= q1 %>
         <h4>questionID: </h4>
@@ -44,8 +43,8 @@
         <label for="txtq5">Answer: </label>
         <input type="text" name="txtq5Answer" id="txtq5" value="Enter Text Here">
 
-
         <input type="submit" value="OK">
     </form>
 </body>
+<%- include('../partials/footer')%>
 </html>

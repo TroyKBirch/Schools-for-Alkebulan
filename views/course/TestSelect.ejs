@@ -8,7 +8,12 @@
 
     <h1>Test select</h1>
 
-    <div><%- tests[0]%></div>
+    <!-- <div><%- tests[0]%></div> -->
+    <% tests.forEach((row) =>{%>  
+        <tr>
+            <td><a href=<%- "http://localhost:3000/test/" + row._id +"/test"%>><%= row._id%></a><br></td>
+        </tr>
+        <%});%>
     
 </body>
 
