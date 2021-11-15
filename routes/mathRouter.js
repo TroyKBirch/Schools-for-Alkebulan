@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const countingModel = require('../models/countingModel');
+const mathModel = require('../models/mathModel');
 const bodyParser = require('body-parser');
 const { json } = require('body-parser');
 const { model } = require('mongoose');
@@ -15,11 +15,11 @@ router.get('/', async (req, res) =>
 {
     try
     {
-        const countingModels = await countingModel.find()
+        const mathModels = await mathModel.find()
 
         res.render('../views/counting/countAll.ejs', 
         {
-            CountingModels: countingModels
+            MathModels: mathModels
         })
     }
     catch (error)
@@ -33,7 +33,7 @@ router.get('/', async (req, res) =>
 // create one
 router.post('/', async (req, res) => 
 {
-    const counting = new countingModel
+    const math = new mathModel
     (
         {
             EnglishNumber: req.body.EnglishNumber,
@@ -44,8 +44,8 @@ router.post('/', async (req, res) =>
 
     try 
     {
-        const newCounting = await counting.save();
-        res.status(201).json(newCounting)
+        const newMath = await math.save();
+        res.status(201).json(newMath)
     } 
     catch (error) 
     {
@@ -54,7 +54,7 @@ router.post('/', async (req, res) =>
 });
 
 // update one
-router.patch('/:id', getCounting, async (req, res) => 
+router.patch('/:id', getMath, async (req, res) => 
 {
     if (req.body.EnglishNumber != null)
     {
@@ -71,8 +71,8 @@ router.patch('/:id', getCounting, async (req, res) =>
 
     try
     {
-        const updatedCounting = await res.countingModel.save();
-        res.json(updatedCounting)
+        const updatedMath = await res.mathModel.save();
+        res.json(updatedMath)
     }
     catch (error)
     {
@@ -81,10 +81,10 @@ router.patch('/:id', getCounting, async (req, res) =>
 });
 
 // delete one
-router.delete('/:id', getCounting, async (req, res) => {
+router.delete('/:id', getMath, async (req, res) => {
     try 
     {
-        await res.countingModel.remove()
+        await res.mathModel.remove()
         res.json({ message: 'Deleted counting entry'})
     } 
     catch (error) 
@@ -97,16 +97,16 @@ router.delete('/:id', getCounting, async (req, res) => {
 //#endregion
 
 //#region middleware functions
-async function getCounting(req, res, next) 
+async function getMath(req, res, next) 
 {
-    let counting;
+    let math;
     try 
     {
-        counting = await countingModel.findById(req.params.id)
+        math = await mathModel.findById(req.params.id)
         
-        if (countingModel == null) 
+        if (mathModel == null) 
         {
-            return res.status(404).json({message: 'Cannot find Counting entry'});
+            return res.status(404).json({message: 'Cannot find Math entry'});
         }
     } 
     catch (error) 
@@ -114,7 +114,7 @@ async function getCounting(req, res, next)
         return res.status(500).json({message: error.message})
     }
 
-    res.countingModel = counting;
+    res.mathModel = math;
     next();
 }
 //#endregion

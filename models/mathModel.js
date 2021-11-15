@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const countingModel = new mongoose.Schema
+const mathModel = new mongoose.Schema
 (
     {
         EnglishNumber:
@@ -21,4 +21,4 @@ const countingModel = new mongoose.Schema
     }
 )
 
-module.exports = mongoose.model('CountingModel', countingModel);
+module.exports = mongoose.model('MathModel', mathModel);
