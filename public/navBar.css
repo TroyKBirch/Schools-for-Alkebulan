@@ -12,7 +12,7 @@ nav{
     left: 0px;
     top: 0px;
 }
-nav h1{
+nav h3{
     position: static;
     width: 475px;
     height: 56px;
@@ -33,17 +33,13 @@ nav h1{
     margin: 0px 10px;
 }
 nav a{
-    /*
-    color: white;
-    width: 100%;
     text-decoration: none;
-    padding: 10px;
-    */
-    position: static;
+
+    /*position: static;
     width: 58px;
     height: 28px;
     left: 10px;
-    top: 10px;
+    top: 10px;*/
 
     font-family: Roboto;
     font-style: normal;
@@ -87,12 +83,6 @@ nav a:hover{
     margin: 0px 16px;
 
     /*Button Text*/
-    position: static;
-    width: 84px;
-    height: 28px;
-    left: 16px;
-    top: 8px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
