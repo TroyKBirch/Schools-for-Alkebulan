@@ -131,14 +131,16 @@ footer{
 {
     position: absolute;
     width: 1440px;
-    height: 1306px;
+    height: 899px;
     left: 0px;
     top: 0px;
+
+
     
     background: url(https://wallpaperaccess.com/full/298397.jpg);
 }
 
-/* todo testTitles */
+/* testTitles */
 #testTitle
 {
     position: absolute;
@@ -161,7 +163,7 @@ footer{
     color: #FFFFFF;
 }
 
-/* todo questionTitles */
+/* questionTitles */
 #Q1Title
 {
     position: absolute;
@@ -224,15 +226,45 @@ footer{
 
 #Q4Title
 {
-
+    position: absolute;
+    width: 117px;
+    height: 28px;
+    left: 744px;
+    top: 259px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    
+    color: #FDFCFC;
 }
 
 #Q5Title
 {
-
+    position: absolute;
+    width: 117px;
+    height: 28px;
+    left: 744px;
+    top: 416px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+    
+    color: #FDFCFC;
 }
 
-/* todo QuestionContent */
+/* QuestionContent */
 #q1Content
 {
     position: absolute;
@@ -292,15 +324,43 @@ footer{
 
 #q4Content
 {
-
+    position: absolute;
+    width: 89px;
+    height: 28px;
+    left: 741px;
+    top: 295px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFBFB;
 }
 
 #q5Content
 {
-
+    position: absolute;
+    width: 88px;
+    height: 28px;
+    left: 736px;
+    top: 450px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    
+    color: #FFFBFB;
 }
 
-/* todo edit box */
+/* edit box */
 #q1EditBox
 {
     position: absolute;
@@ -345,17 +405,33 @@ footer{
 
 #q4EditBox
 {
-
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #FFFFFF;
+    border: 1px solid #D5D8DE;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 #q5EditBox
 {
-
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #FFFFFF;
+    border: 1px solid #D5D8DE;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
-/* todo label */
-
-/* todo button */
+/* button */
 #testSubmitButton
 {
     display: flex;
