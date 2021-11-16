@@ -1,10 +1,36 @@
-/*Course Selection*/
+/* #region Course Selection*/
 .CourseSection{
     position: absolute;
     width: 1000px;
-    height: 950px;
-    left: 300px;
+    height: 600px;
+    left: 150px;
     top: 300px;
+}
+
+#courseBanner{
+    position: absolute;
+    width: 765px;
+    height: 127px;
+    left: 285px;
+    top: 120px;
+
+    background: rgba(250, 78, 137, 0.96);
+    padding: 8px;
+    border: 5px solid #FFFFFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    align-items: center;
+
+}
+#courseBanner h3{
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 #courseList{
@@ -12,14 +38,116 @@
     height: 200%;  
 }
 
+#courseList a{
+    text-decoration: none;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #EE5D84;
+}
 #courseList li{
     display: inline-block;
     width: 50%;
-    height: 100px;
+    height: auto;
     float: left;
     text-align: center;
+
+    background: #0E136B;
+    border: 8px solid #ED5683;
+    box-sizing: border-box;
     
+    padding: 100px;
 }
 #courseList li:hover{
     background-color: skyblue;
 }
+#courseList p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+/* #endregion */
+
+/* #region Section: Course Newsletter*/
+#courseNewsSection{
+    position: absolute;
+    width: 1440px;
+    height: 1440px;
+    left: 0px;
+    top: 1024px;
+
+    background: url(../images/b8fe9cb3386d82d8b2da6ec314f3a979.jpg);
+    background-size: contain;
+    filter: blur(0.5px);    
+
+    padding: 10px;
+}
+
+#txtNewsSection{
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    left: 22px;
+    top: auto;
+    
+    background: #79C7D4;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+}
+#txtNewsSection h3{
+    position: absolute;
+    width: 199px;
+    height: 84px;
+    left: 235px;
+    top: 40px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 84px;
+    
+    color: #EE5D84;
+}
+#txtNewsSection p{
+    position: absolute;
+    width: 583px;
+    height: 244px;
+    left: 60px;
+    top: 230px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    
+    color: #FFFFFF;  
+}
+
+#imgNewsSectionPic{
+    position: absolute;
+    width: 565px;
+    height: 700px;
+    left: 735px;
+    top: auto;
+    
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+
+    background: url(https://i.pinimg.com/564x/fc/bd/15/fcbd155ea6c6994b1e73dfd18c761e9b.jpg);
+    background-size: cover;
+}
+/* #endregion */

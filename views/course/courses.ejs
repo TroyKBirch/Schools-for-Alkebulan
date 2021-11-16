@@ -4,29 +4,47 @@
     <%- include('./partials/head') %>
    
 <body>
-    
-    <header>
-        <%- include('../partials/navTop') %>
-    </header>
+
+    <%- include('../partials/navTop') %>
+
+    <div id="courseBanner">
+        <h3>Courses on Offer</h3>
+    </div>
     
    <div class="CourseSection">
         <ul id="courseList">
             <li>
                 <a href="courses/english">English</a>
-                <p>Lorem ipsum dolor sit amet, consect</p>
+                <p>I'm a paragraph. Click here to add your
+                    own text and edit me. It’s easy. 
+                    Just click “Edit Text” or double click me to add 
+                    your own content and make changes to the font. </p>
             </li>
             <li>
                 <a href="courses/mathematics">Mathematics</a>
-                <p>Lorem ipsum dolor sit amet, consect</p>
+                <p>I'm a paragraph. Click here to add your
+                    own text and edit me. It’s easy. 
+                    Just click “Edit Text” or double click me to add 
+                    your own content and make changes to the font. </p>
             </li>
         </ul>
 
    </div>
-<!-- 
-   <nav id="navBottom">
-        <input type="button" value="Previous" onclick="goPrevPage()" id="btnPrevious">
-        <input type="button" value="Next" onclick="goNextPage()" id="btnNext">
-    </nav> -->
+
+   <section id="courseNewsSection">
+        <div id="txtNewsSection">
+            <h3>NEWS</h3>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. 
+                Just click “Edit Text” or double click me to add your own content and make changes to the font. </p>
+        </div>
+        <div id="imgNewsSectionPic">
+            
+        </div>
+   </section>
+
+   <section id="negativeSpaceSection">
+    <div></div>
+</section>
 </body>
     <%- include('../partials/footer')%>
 </html>
