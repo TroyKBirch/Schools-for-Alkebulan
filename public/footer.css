@@ -11,9 +11,9 @@ footer{
     color: #FFFFFF;*/
 
     position: fixed;
-    width: 1350px;
+    width: 100%;
     height: 225px;
-    left: 32px;
+    /*left: 32px;*/
     /*top: 4406px;*/
     bottom: 0;
     display: inline-block;
