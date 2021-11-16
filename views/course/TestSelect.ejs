@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <header>
+        <%- include('../partials/navTop') %>
+    </header>
+
+    <h1>Test select</h1>
+
+    <!-- <div><%- tests[0]%></div> -->
+    <% tests.forEach((row) =>{%>  
+        <tr>
+            <td><a href=<%- "http://localhost:3000/test/" + row._id +"/test"%>><%= row._id%></a><br></td>
+        </tr>
+        <%});%>
+    
+</body>
+
+<nav id="navBottom">
+    <input type="button" value="Previous" onclick="goPrevPage()" id="btnPrevious">
+    <input type="button" value="Next" onclick="goNextPage()" id="btnNext">
+</nav>
+
+<%- include('../partials/footer')%>
+</html>

@@ -1,0 +1,93 @@
+/*Navigation Bar*/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+
+    position: absolute;
+    width: 1440px;
+    height: 92px;
+    left: 0px;
+    top: 0px;
+}
+nav h3{
+    position: static;
+    width: 475px;
+    height: 56px;
+    left: 10px;
+    top: 10px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+nav a{
+    text-decoration: none;
+
+    /*position: static;
+    width: 58px;
+    height: 28px;
+    left: 10px;
+    top: 10px;*/
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+nav a:hover{
+    background-color: skyblue;
+    padding: 15px;
+}
+
+#btnSignup{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 16px;
+
+    position: static;
+    width: 116px;
+    height: 44px;
+    left: 614px;
+    top: 0px;
+
+    background: #47E9E9;
+    border: 1px solid #FFFBFB;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    margin: 0px 16px;
+
+    /*Button Text*/
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFCFC;
+}

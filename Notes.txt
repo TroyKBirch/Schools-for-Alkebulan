@@ -1,0 +1,19 @@
+//Code removed from grades.ejs
+<!--
+            Use this code to iterate through an object to fill out a
+            table with data 
+            <%{object}.forEach((obj) =>{%>  
+            <tr>
+                <td><%= obj%></td>
+            </tr>
+            <%});%>
+            
+            <% grades.forEach((row) =>{%>  
+                <tr>
+                    <td><%= row.MarkID%></td>
+                    <td><%= row.ProfileID%></td>
+                    <td><%= row.AssessorID%></td>
+                    <td><%= row.TestID%></td>
+                    <td><%= row.MarkForTest%></td>
+                </tr>
+                <%});%>  -->

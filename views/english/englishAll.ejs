@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <header>
+        <%- include('../partials/navTop') %>
+    </header>
+
+    <div>
+        <% EnglishModels.forEach((row) =>{%>  
+            <tr>
+                <td><%= row.EnglishWord%></td>
+                <td><%= row.OtherLanguageWord%></td>
+            </tr>
+            <%});%>
+    </div>
+
+</body>
+</html>
