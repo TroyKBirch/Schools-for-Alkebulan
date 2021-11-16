@@ -387,23 +387,6 @@ body{
 }
 /* #endregion */
 
-/*Course Selection*/
-#courseList{
-    color: white; 
-    height: 200%;  
-}
-
-#courseList li{
-    display: inline-block;
-    width: 50%;
-    height: 100px;
-    float: left;
-    text-align: center;
-    
-}
-#courseList li:hover{
-    background-color: skyblue;
-}
 /*
 section{
     float: left;

@@ -1,0 +1,25 @@
+/*Course Selection*/
+.CourseSection{
+    position: absolute;
+    width: 1000px;
+    height: 950px;
+    left: 300px;
+    top: 300px;
+}
+
+#courseList{
+    color: white; 
+    height: 200%;  
+}
+
+#courseList li{
+    display: inline-block;
+    width: 50%;
+    height: 100px;
+    float: left;
+    text-align: center;
+    
+}
+#courseList li:hover{
+    background-color: skyblue;
+}
