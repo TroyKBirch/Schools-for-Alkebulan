@@ -1,3 +1,4 @@
+/*
 html{
     height: 100%;
 }
@@ -7,10 +8,11 @@ html, body {
     font-size: 15px;
     line-height: 1.5;
 
-}
+}*/
+
 
 /*Home Course selection*/
-#quickLink div{
+/*#quickLink div{
     width: 50%;
     float: left;
     text-align: center;
@@ -23,22 +25,30 @@ div a{
 }
 #quickLink div:hover{
     background-color: skyblue;
-}
+}*/
 
 /*Body*/
 body{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.753);
+    background-size: cover;
+    background-image: url(https://img2.wallspic.com/previews/0/6/9/0/20960/20960-iceberg-graphics-tranquillity-water-landscape-x750.jpg);
 }
 
+/* #region Section 1: Welcome*/
+#SectionWelcome{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 3830px;
 
+    background-image: url(https://i.pinimg.com/564x/66/44/b3/6644b34c91f57f8d40a4eaa94e3cb797.jpg);
+}
 #txtWelcomeHeading{
     position: absolute;
     width: 949px;
     height: 113px;
-    left: calc(50% - 949px/2 - 0.5px);
-    top: 388px;
+    left: 388px;
+    top: 300px;
 
     font-family: Roboto;
     font-style: normal;
@@ -88,9 +98,294 @@ body{
     flex-grow: 0;
     margin: 0px 10px;
 }
+/* #endregion Section 1: Welcome*/
 
+/* #region Section 2: Journey With Us*/
+#companyInfo{
+    position: absolute;
+    width: 594px;
+    height: 842px;
+    left: 33px;
+    top: 910px;
 
+    background-color:rgba(53, 109, 104, 0.705);
+}
+#companyInfo h3{
+    position: absolute;
+    width: 530px;
+    height: 42px;
+    left: 32px;
+    top: 220px;
 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+#companyInfo p{
+    position: absolute;
+    width: 513px;
+    height: 140px;
+    left: 61px;
+    top: 309px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+#companyInfoGraphics{
+    position: absolute;
+    width: 770px;
+    height: 844px;
+    left: 638px;
+    top: 908px;
+
+    background-color:rgba(53, 109, 104, 0.705);
+}
+#Image1{
+    position: absolute;
+    width: 247px;
+    height: 342px;
+    left: 720px;
+    top: 848px;
+
+    background: #376CF3;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+#Image2{
+    position: absolute;
+    width: 247px;
+    height: 342px;
+    left: 388px;
+    top: 59px;
+
+    background: #376CF3;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+#Image3{
+    position: absolute;
+    width: 247px;
+    height: 342px;
+    left: 81px;
+    top: 340px;
+    
+    background: #376CF3;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+#Image4{
+    position: absolute;
+    width: 247px;
+    height: 342px;
+    left: 374px;
+    top: 470px;
+    
+    background: #376CF3;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+/* #endregion */
+
+/* #region Section 3: Course Info*/
+#SectionCourseInfo{
+    background-size: cover;
+    background: url(https://img2.wallspic.com/previews/0/6/9/0/20960/20960-iceberg-graphics-tranquillity-water-landscape-x750.jpg);
+    background-color:aliceblue;
+}
+#courseInfoImage{
+    position: absolute;
+    width: 594px;
+    height: 942px;
+    left: 33px;
+    top: 1841px;
+
+    background: url(https://cdn.dribbble.com/users/1787323/screenshots/12721622/media/8b48f8e71cf36513a9453bf7013222d2.png);
+    background-size: contain;
+
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+#txtCourseInfo{
+    position: absolute;
+    width: 770px;
+    height: 943px;
+    left: 638px;
+    top: 1840px;
+    background: #79C7D4;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+}
+#txtCourseInfo h3{
+    position: absolute;
+    width: 234px;
+    height: 116px;
+    left: 266px;
+    top: 66px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #EF678C;
+}
+#txtCourseInfo p{
+    position: absolute;
+    width: 520px;
+    height: 561px;
+    left: 124px;
+    top: 182px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+#btnCourseInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    
+    position: absolute;
+    width: 233px;
+    height: 58px;
+    left: 267px;
+    top: 714px;
+    
+    background: #EE5885;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+/* #endregion */
+
+/* #region Section 4: Register*/
+#registerInfoImage{
+    position: absolute;
+    width: 594px;
+    height: 907px;
+    left: 33px;
+    top: 3338px;
+     
+    background: url(../images/bae19bbdc942508c2ef4e76b22a39537.jpg);
+    background-size: contain;
+
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+#txtRegisterInfo{
+    position: absolute;
+    width: 766px;
+    height: 909px;
+    left: 642px;
+    top: 3336px;
+
+    background: #79C7D4;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+}
+#txtRegisterInfo h3{
+    position: absolute;
+    width: 234px;
+    height: 116px;
+    left: 266px;
+    top: 79px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #EF678C;
+}
+#txtRegisterInfo p{
+    position: absolute;
+    width: 520px;
+    height: 561px;
+    left: 142px;
+    top: 203px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+#btnRegisterInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    
+    position: absolute;
+    width: 278px;
+    height: 58px;
+    left: 267px;
+    top: 735px;
+    
+    background: #EE5885;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+/* #endregion */
 
 /*Course Selection*/
 #courseList{
@@ -109,13 +404,13 @@ body{
 #courseList li:hover{
     background-color: skyblue;
 }
-
+/*
 section{
     float: left;
 }
 section ul li a{
-    /* color: black;
-    text-decoration: none;    */
+     color: black;
+    text-decoration: none;    
     display: block;
     text-decoration: none;
     color: white;
@@ -129,7 +424,7 @@ section ul li a:hover{
     background-color: skyblue;
     border: solid;
     border-color: white;
-}
+}*/
 
 #courselistEng li{
     list-style: none;

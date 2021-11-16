@@ -11,13 +11,13 @@ footer{
     color: #FFFFFF;*/
 
     position: absolute;
-    width: 1375px;
+    width: 1350px;
     height: 399px;
     left: 32px;
     top: 4406px;
     padding: 8px;
 
-    background: url(.jpg);
+    background-color:rgba(53, 109, 104, 0.705);
 }
 footer h4{
     position: absolute;
@@ -141,7 +141,7 @@ footer h4{
 #btnNext {
     position: absolute;
     bottom: 0;
-    left: 100%;
+    left: 87%;
     float: right;
     height: 75px;
     width: 175px;
