@@ -2,7 +2,6 @@
 //! Packages installed
 //     > npm i express --save
 //     > npm i body-parser --save
-//     > npm i mssql --save
 //     > npm i ejs --save
 //     > npm i mongoose --save
 //#endregion
@@ -15,6 +14,8 @@ const port = 3000;
 const courseRoutes = require('./routes/courseRoutes');
 const questionRouter = require('./routes/questionRouter');
 const testRouter = require('./routes/testRouter');
+const englishRouter = require('./routes/englishRouter');
+const mathRouter = require('./routes/mathRouter')
 const mongoose = require('mongoose');
 //#endregion
 
@@ -41,6 +42,8 @@ app.use(express.json());
 //#region routes
 app.use('/courses', courseRoutes);
 app.use('/test', testRouter);
+app.use('/math', mathRouter)
+app.use('/english', englishRouter)
 app.use('/question', questionRouter);
 //#endregion
 

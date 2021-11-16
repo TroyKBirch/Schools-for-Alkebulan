@@ -244,7 +244,7 @@ router.post('/', async (req, res) => {
 });
 
 // update one
-router.patch('/:id', getQuestion, async (req, res) => {
+router.patch('/:id', getTest, async (req, res) => {
     if (req.body.q1 != null) {
         res.testModel.q1 = req.body.q1;
     }
@@ -270,7 +270,7 @@ router.patch('/:id', getQuestion, async (req, res) => {
 });
 
 // delete one
-router.delete('/:id', getQuestion, async (req, res) => {
+router.delete('/:id', getTest, async (req, res) => {
     try {
         await res.testModel.remove()
         res.json({ message: 'Deleted Test'})
