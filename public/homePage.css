@@ -31,8 +31,12 @@ div a{
 body{
     background-size: cover;
     background-image: url(https://img2.wallspic.com/previews/0/6/9/0/20960/20960-iceberg-graphics-tranquillity-water-landscape-x750.jpg);
+
 }
 
+.HomePageSections{
+    height: max-content;
+}
 /* #region Section 1: Welcome*/
 #SectionWelcome{
     position: absolute;
@@ -387,23 +391,17 @@ body{
 }
 /* #endregion */
 
-/*Course Selection*/
-#courseList{
-    color: white; 
-    height: 200%;  
+#negativeSpaceSection div{
+    position: absolute;
+    width: 1350px;
+    height: 315px;
+    left: 32px;
+    top: 4406px;
+    bottom: 0;
+    display: inline-block;
+
 }
 
-#courseList li{
-    display: inline-block;
-    width: 50%;
-    height: 100px;
-    float: left;
-    text-align: center;
-    
-}
-#courseList li:hover{
-    background-color: skyblue;
-}
 /*
 section{
     float: left;
