@@ -50,7 +50,15 @@ app.use('/question', questionRouter);
 //#region get requests
 //Endpoint which will render the page after connecting to the database
 app.get('/grades', (req, res) => {    
-    res.render('grades');
+    res.render('ToDo');
+});
+
+app.get('/about', (req, res) => {    
+    res.render('ToDo');
+});
+
+app.get('/signup', (req, res) => {    
+    res.render('ToDo');
 });
 
 app.get('/home', (req, res) => {
